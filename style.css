@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mario-class {
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 15px solid #1c921e;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+    
+.pipe {
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    animation: pipee 1.5s infinite linear;
+}
+
+@keyframes pipee {
+    from {
+        right: -20%;
+    }
+    to {
+       right: 100%;
+    }
+}
+
+.mario {
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    
+}
+.jumpp {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+       bottom: 0;
+    }
+}
+
+.clouds {
+    width: 400px;
+    position: absolute;
+    animation: clouds 8s infinite linear;
+}
+
+@keyframes clouds {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes death {
+    30% {
+        bottom: -10%; /* Pulo rápido */
+    }
+    40% {
+        bottom: -20%;
+    }
+    50% {
+        bottom: -30%;
+    }
+    100% {
+        bottom: -50%;
+    }
+}
+
+.gameover {
+    animation: death 2s linear forwards;
+}
+
+#container {
+    position: absolute;
+    animation: menu 1s linear;
+    border: 3px solid #ffa07a;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 20%;
+    margin: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    border-radius: 10px;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fac068, #6be56f);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#container button {
+   padding: 12px;
+   border-radius: 8px;
+   border: none;
+   font-weight: 600;
+   color: #ffffff;
+   width: 70%;
+   margin: 20px auto;
+   cursor: pointer;
+   background: linear-gradient(135deg, #ff8a65, #ffb74d);
+   transition: transform 0.2s ease, background 0.3s ease;
+}
+
+a, button { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+#container button:hover {
+   background: linear-gradient(135deg, #ff7043, #ffa726);
+}
+
+#container button:active {
+   transform: scale(0.95);
+   background: linear-gradient(135deg, #ff5722, #ff9800);
+}
+
+#container h2 {
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes menu {
+    0% {
+        top: -50%;
+    }
+    30% {
+        top: -30%;
+    }
+    50% {
+        top: -40%;
+    }
+    70% {
+        top: 20%;
+    }
+    100% {
+        top: 10%;
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+.active {
+    display: flex;
+}
